@@ -2,9 +2,9 @@ FROM node:16
 
 WORKDIR /usr/app
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm ci
-COPY . .
+COPY . ./
 RUN npm run build
 
 EXPOSE 3000
